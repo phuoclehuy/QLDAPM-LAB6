@@ -1,0 +1,63 @@
+Đặc tả yêu cầu hệ thống:
+Xem bản đồ trạm xe buýt
+	Tra cứu tuyến xe buýt: biểu đồ giờ, tuyến đường
+	Tìm đường: tìm kiếm cách đi xe buýt từ vị trí A đến vị trí B
+	Theo dõi từng xe buýt theo tuyến: vị trí, tốc độ, biển số, thời gian đến trạm
+	Đánh giá xe buýt
+Công việc cần làm
+Front-end
+	Giao diện bản đồ các trạm xe buýt
+		Vẽ bản đồ địa lý
+		Vẽ các điểm trạm trên bản đồ
+
+	Giao diện thông tin của trạm
+		Hiển thị các tuyến đi qua trạm (mã tuyến, chiều)
+		Hiển thị thông tin cơ bản của từng tuyến
+
+	Giao diện tìm đường xe buýt
+		Form nhập vị trí hiện tại và vị trí cần đến
+		Hiển thị danh sách các đường đi khả thi
+		Vẽ chi tiết tuyến đường hướng dẫn
+
+	Giao diện danh sách các tuyến xe buýt
+		Hiển thị danh sách các tuyến xe bus (mã tuyến, bến đầu bến cuối, giá tiền, đánh giá)
+
+	Giao diện chi tiết của tuyến xe buýt cụ thể
+		Hiển thị thông tin chi tiết (các trạm, thời gian di chuyển giữa các trạm, lịch trình xuất phát)	
+		Giao diện biểu đồ tuyến đường của các tuyến xe buýt
+
+	Giao diện đánh giá tuyến xe buýt
+		Đánh giá theo sao, bình luận cho tuyến
+
+	Giao diện tùy chỉnh thông báo
+		Thông báo chuyến xe sắp đến trạm
+		Thông báo khi tuyến xe thay đổi lịch trình
+
+Back-end
+	Thiết lập cơ sở dữ liệu tĩnh
+		Lấy dữ liệu các trạm từ bên thứ 3
+		Lấy dữ liệu các tuyến từ bên thứ 3
+		Cập nhật dữ liệu theo chu kỳ 
+
+	API danh sách các trạm xe buýt
+		Lấy dữ liệu từ cơ sở dữ liệu
+		Xử lý và trả về thông tin các trạm
+
+	API danh sách các tuyến xe buýt
+		Lấy dữ liệu từ cơ sở dữ liệu
+		Xử lý và trả về thông tin các tuyến xe bus
+		
+	API chi tiết thông tin của tuyến xe buýt cụ thể
+		Lấy dữ liệu từ cơ sở dữ liệu
+		Xử lý và trả về thông tin của 1 tuyến xe bus cụ thể
+
+	API danh sách các cách đi khả dụng từ vị trí A đến vị trí B
+		Tìm các cách di chuyển từ A đến B theo các tiêu chí: đường đi ngắn nhất, chuyển tuyến ít nhất
+		Trả về danh sách kèm theo chi tiết đường đi cụ thể của từng cách
+
+	API đánh giá xe buýt
+		Nhận và lưu trữ đánh giá của tuyến xe
+
+	API gửi thông báo
+		Thông báo chuyến xe sắp đến trạm
+		Thông báo khi tuyến xe thay đổi lịch trình
